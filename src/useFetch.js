@@ -17,7 +17,10 @@ const useFetch = (url) => {
                         setError(null);
                     });
             }
-            ).catch(err => setError(err.message));
+            ).catch(err => {
+                setError(err.message);
+                setIsPending(false);
+            });
     }, [url]);
     return { data, isPending, error };
 }
