@@ -1,15 +1,15 @@
 {
   "blogs": [
     {
-      "title": "My blog2",
+      "title": "My blog",
       "body": "nothing",
       "author": "Yoshi",
       "id": 1
     },
     {
       "title": "Mario blog",
-      "body": "everything",
-      "author": "Mario",
+      "body": "a",
+      "author": "Yoshi",
       "id": 2
     },
     {
