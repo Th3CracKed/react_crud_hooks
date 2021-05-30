@@ -1,16 +1,22 @@
 {
   "blogs": [
     {
-      "title": "My blog ",
+      "title": "My blog",
       "body": "nothing",
       "author": "Yoshi",
       "id": 1
     },
     {
       "title": "Mario blog",
-      "body": "everything",
-      "author": "Mario",
+      "body": "a",
+      "author": "Yoshi",
       "id": 2
+    },
+    {
+      "title": "AAA",
+      "body": "dd",
+      "author": "Mario",
+      "id": 3
     }
   ]
 }

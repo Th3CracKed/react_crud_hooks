@@ -10,7 +10,6 @@ const useFetch = (url) => {
         setTimeout(() => {
             fetch(url, { signal: abortController.signal })
                 .then(response => {
-                    setIsPending(false);
                     if (!response.ok) {
                         throw Error('could not fetch the data from that resource');
                     }
@@ -18,6 +17,7 @@ const useFetch = (url) => {
                         .then(data => {
                             setData(data);
                             setError(null);
+                            setIsPending(false);
                         });
                 }
                 ).catch(err => {

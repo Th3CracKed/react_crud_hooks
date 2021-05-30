@@ -4,6 +4,9 @@ import useFetch from './useFetch';
 const BlogDetails = () => {
     const { id } = useParams();
     const history = useHistory();
+    const updateBlog = (blogId) => {
+        history.push('/update/' + blogId);
+    }
     const deleteBlog = (blogId) => {
         fetch('http://localhost:8000/blogs/' + blogId, {
             method: 'DELETE',
@@ -19,6 +22,7 @@ const BlogDetails = () => {
                     <h2>{blog.title}</h2>
                     <p>Written by {blog.author}</p>
                     <div>{blog.body}</div>
+                    <button onClick={() => updateBlog(blog.id)}>Update</button>
                     <button onClick={() => deleteBlog(blog.id)}>Delete</button>
                 </article>
             )}
