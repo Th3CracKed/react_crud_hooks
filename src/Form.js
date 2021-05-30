@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-const Form = ({ fetchMethod }) => {
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('Mario');
+const Form = ({ fetchMethod, blogState: { title: titleState, body: bodyState, author: authorState }, action }) => {
+    const [title, setTitle] = useState(titleState || '');
+    const [body, setBody] = useState(bodyState || '');
+    const [author, setAuthor] = useState(authorState || 'Mario');
     const [isPending, setIsPending] = useState(false);
 
     const history = useHistory();
@@ -30,7 +30,7 @@ const Form = ({ fetchMethod }) => {
                 <option value="Mario">Mario</option>
                 <option value="Yoshi">Yoshi</option>
             </select>
-            {!isPending && <button>Add Blog</button>}
+            {!isPending && <button>{action} Blog</button>}
             {isPending && <button disabled>Adding Blog...</button>}
         </form>
     );

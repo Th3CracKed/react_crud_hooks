@@ -7,12 +7,12 @@ const Create = () => {
         body: JSON.stringify(data)
     });
 
-return (
-    <div className="create">
-        <h2>Add a new Blog</h2>
-        <Form fetchMethod={fetchMethod} />
-    </div>
-);
+    return (
+        <div className="create">
+            <h2>Add a new Blog</h2>
+            <Form fetchMethod={fetchMethod} blogState={{}} action={"Delete"}/>
+        </div>
+    );
 }
 
 export default Create;
